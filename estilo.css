@@ -39,3 +39,9 @@ main img {
     margin: 10px;
     
 }
+
+.navegacao ul, li{
+display: flex;
+background-color: #59ABA7;
+margin-left: 150px;
+}
