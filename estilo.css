@@ -22,18 +22,20 @@ main a {
 
 main a:hover{
     color: #fff;
-    font-size: 19px;
+    font-size: 17px;
     transition: 0.5s;
 }
 
 main img {
+    margin-top: 2px;
     border: 1px solid #59ABA7;
-    border-radius: 10px;
     display: flex;
     justify-content: space-around;
 }
 
-.menu-inicio{
-    display: flexbox;
+.menu-inicio .card{
+    display: flex;
     justify-content: space-between;
+    margin: 10px;
+    
 }
