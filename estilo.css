@@ -9,3 +9,39 @@
 height: 450px;
 
 }
+
+main a {
+    text-decoration: none;
+    background-color:#59ABA7;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+main a:hover{
+    color: #fff;
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+main img {
+    margin-top: 2px;
+    border: 1px solid #59ABA7;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-inicio .card{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    
+}
+
+.navegacao ul, li{
+display: flex;
+background-color: #59ABA7;
+margin-left: 150px;
+}
