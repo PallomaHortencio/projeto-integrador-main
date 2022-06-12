@@ -71,4 +71,10 @@ ul li {
 
 h5 {
     text-align: center;
-}
+  
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;

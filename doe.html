@@ -27,36 +27,107 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="adote.html">Adote</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="doe.html">Doe</a>
-        </li>
-       
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="sobre.html">Sobre</a>
-        </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="adote.html">Adote</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="doe.html">Doe</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="sobre.html">Sobre</a>
+          </li>
         </ul>
         <form class="d-flex" role="search">
+
+          <div>
+            <a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>Entre ou Cadastra-se</a>
+          </div>
+          
           <input class="form-control me-2" type="buscar" placeholder="Buscar" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">🐾</button>
+
+
         </form>
       </div>
     </div>
   </nav>
 
 
-   <!-- Footer -->
-<footer>
+
+
+
+    <h3>Preencha para cadastrar o pet!</h3>
+
+    <div>
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome">
+    </div>
+  <div>
+      <label for="data">Idade aproximada:</label>
+      <input type="date" name="data" id="data" required>
+    </div>
+
+
+    <div>
+      <label for="obs">Informações:</label>
+      <span id="maximo"> (restam <b id="caracteres">200</b> caracteres)</span>
+      <textarea name="obs" id="obs" cols="20" rows="5" maxlength="200" required></textarea>
+    </div>
+
+  
+    <button type="submit" >Fazer Cadastro🐾</button>
+
+
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Fim do formulario -->
+
+
+
+  <!-- Footer -->
+  <footer>
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
       © 2021 Copyright:
       <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
     </div>
   </footer>
-  
 
 
 <script src="projeto-integrador.js"></script>
