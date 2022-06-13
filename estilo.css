@@ -1,14 +1,6 @@
-.menu-inicio{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 50px;
-}
 
-.destaque {
- background-image: url(compressjpeg/dog-destaque.jpg);
-height: 450px;
 
-}
+
 
 
 
@@ -32,10 +24,7 @@ main img {
     
 }
 
-.navegacao ul, li{
-display: flex;
-margin-left: 110px;
-}
+
 
 
 .card-text{
@@ -69,12 +58,3 @@ ul li {
     margin-left: 10px;
 }
 
-h5 {
-    text-align: center;
-  
-.divider:after,
-.divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
