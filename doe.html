@@ -46,33 +46,68 @@
     </div>
   </header>
 
-
-
-
-
-    <h3>Preencha para cadastrar o pet!</h3>
-
-    <div>
-      <label for="nome">Nome:</label>
-      <input type="text" name="nome" id="nome">
-    </div>
-  <div>
-      <label for="data">Idade aproximada:</label>
-      <input type="date" name="data" id="data" required>
-    </div>
-
-
-    <div>
-      <label for="obs">Informações:</label>
-      <span id="maximo"> (restam <b id="caracteres">200</b> caracteres)</span>
-      <textarea name="obs" id="obs" cols="20" rows="5" maxlength="200" required></textarea>
-    </div>
-
+  <section class="" style="background-color: white;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
   
     <button type="submit" >Fazer Cadastro🐾</button>
 
 
   </form>
+
+              <h3 class="mb-5">Preencha as Informações do Pet</h3>
+  
+              <div class="form-outline mb-2">
+                <label for="nome"></label>
+                <input type="text" name="nome" id="nome" class="form-control form-control-lg" placeholder="Nome">
+              </div>
+
+              <div class="form-outline mb-2">
+                <label for="nome"></label>
+                <input type="text" name="nome" id="nome" class="form-control form-control-lg" placeholder="Categoria">
+              </div>
+
+              <div class="form-outline mb-2">
+                <label for="nome"></label>
+                <input type="text" name="nome" id="nome" class="form-control form-control-lg" placeholder="Sexo">
+              </div>
+
+              <div>
+                <label for="data"></label>
+                <input type="text" name="data" id="data" class="form-control form-control-lg" placeholder="Idade Aproximada">
+              </div>
+
+              <div class="form-outline mb-2">
+                <label for="nome"></label>
+                <input type="text" name="nome" id="nome" class="form-control form-control-lg" placeholder="Caracteristicas">
+              </div>
+
+              <p class="my-4"></p>
+
+              <div>
+                <label for="obs" ></label>
+                <span id="maximo"> (restam <b id="caracteres">200</b> caracteres)</span>
+                <textarea name="obs" id="obs" cols="20" rows="5" maxlength="200" class="form-control form-control-lg" placeholder="Informações" required></textarea>
+              </div>
+
+              <p class="my-4"></p>
+         
+
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Fazer Cadastro🐾</button>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
 
   <!-- Fim do formulario -->
 
