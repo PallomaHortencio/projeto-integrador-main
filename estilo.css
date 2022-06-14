@@ -3,9 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Sarabun&family=Source+Sans+Pro&display=swap');
 
-body{
-    font-family: 'Sarabun';
-}
 
 .menu-cima a:hover{
 background-color: #FBB03B;
@@ -57,6 +54,7 @@ main img {
     text-align: left;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-family: 'source sans pro';
 }
 
 .card-link {
@@ -70,6 +68,7 @@ main img {
     padding-top: 10px;
     padding-left: 80px;
     padding-right: 80px;
+    
 }
 
 main a {
