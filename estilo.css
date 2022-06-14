@@ -1,12 +1,22 @@
+.menu-cima a:hover{
+background-color: #FBB03B;
+border-radius: 5px;
+color: #fff;
+transition: 0.6s;
+padding: 5px;
+}
 
 
 
-
+.menu-baixo a, .menu-cima a{
+    color: #000;
+}
 
 
 main a:hover{
+    background-color: #FBB03B;
     color: #fff;
-    font-size: 17px;
+    font-size: 16px;
     transition: 0.5s;
 }
 
