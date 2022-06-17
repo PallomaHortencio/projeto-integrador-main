@@ -27,36 +27,143 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="adote.html">Adote</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="doe.html">Doe</a>
-        </li>
-       
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="sobre.html">Sobre</a>
-        </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="adote.html">Adote</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="doe.html">Doe</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="sobre.html">Sobre</a>
+          </li>
         </ul>
         <form class="d-flex" role="search">
+
+          <div>
+            <a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>Entre ou Cadastra-se</a>
+          </div>
+          
           <input class="form-control me-2" type="buscar" placeholder="Buscar" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">🐾</button>
+
+
         </form>
       </div>
     </div>
   </nav>
 
 
-   <!-- Footer -->
-<footer>
+  <section class="" style="background-color: white;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <h3 class="mb-5">Preencha as Informações do Pet</h3>
+  
+              <div class="form-outline mb-2">
+                <label for="nome"></label>
+                <input type="text" name="nome" id="nome" class="form-control form-control-lg" placeholder="Nome">
+              </div>
+
+              <div class="form-outline mb-2">
+                <label for="nome"></label>
+                <input type="text" name="nome" id="nome" class="form-control form-control-lg" placeholder="Categoria">
+              </div>
+
+              <div class="form-outline mb-2">
+                <label for="nome"></label>
+                <input type="text" name="nome" id="nome" class="form-control form-control-lg" placeholder="Sexo">
+              </div>
+
+              <div>
+                <label for="data"></label>
+                <input type="text" name="data" id="data" class="form-control form-control-lg" placeholder="Idade Aproximada">
+              </div>
+
+              <div class="form-outline mb-2">
+                <label for="nome"></label>
+                <input type="text" name="nome" id="nome" class="form-control form-control-lg" placeholder="Caracteristicas">
+              </div>
+
+              <div class="form-outline mb-2">
+                <label for="telefone"></label>
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone: (00) 12345-6789" class="form-control form-control-lg" required>
+              </div>
+          
+              <div class="form-outline mb-2">
+                <label for="cep"></label>
+                <input type="text" name="cep" id="cep" maxlength="9" class="form-control form-control-lg" placeholder="CEP" required>
+              </div>
+              
+              <div class="form-outline mb-2">
+                <label for="endereco"></label>
+                <input type="text" name="endereco" id="endereco" size="30" class="form-control form-control-lg" placeholder="Endereço">
+              </div>
+          
+              <div class="form-outline mb-2">
+                <label for="bairro"></label>
+                <input type="text" name="bairro" id="bairro" class="form-control form-control-lg" placeholder="Bairro">
+              </div>
+          
+              <div class="form-outline mb-2">
+                <label for="cidade"></label>
+                <input type="text" name="cidade" id="cidade" class="form-control form-control-lg" placeholder="Cidade">
+              </div>
+          
+              <div class="form-outline mb-2">
+                <label for="estado"></label>
+                <input type="text" name="estado" id="estado" class="form-control form-control-lg" placeholder="Estado">
+              </div>
+
+              
+              <div>
+                <label for="obs" ></label>
+                <span id="maximo"> (restam <b id="caracteres">200</b> caracteres)</span>
+                <textarea name="obs" id="obs" cols="20" rows="5" maxlength="200" class="form-control form-control-lg" placeholder="Informações" required></textarea>
+              </div>
+
+              <p class="my-4"></p>
+              
+              <div class="mb-3">
+                <label for="formFile" class="form-label">Mande uma foto do pet!</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+
+              <p class="my-4"></p>
+         
+              
+
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Fazer Cadastro🐾</button>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Fim do formulario -->
+
+
+
+  <!-- Footer -->
+  <footer>
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
       © 2021 Copyright:
       <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
     </div>
   </footer>
-  
 
 
 <script src="projeto-integrador.js"></script>
