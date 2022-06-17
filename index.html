@@ -9,21 +9,22 @@
     <title>HelpPets - Página Inicial</title>
 
        <!-- Palavras-chave de página -->
-       <meta name="keywords" content="Adoção, Adote">
+       <meta name="keywords" content="Adoção, Adote,casa de adoçao, doaçao de animais">
        <link rel="stylesheet" href="estilo.css">
        <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
 <body>
-  
+  <!-- Cabeçalho com o menu dentro -->
+  <header>
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <img class="icone" src="compressjpeg/icone.definitivo.png" alt="Icone HelpPets"><a class="navbar-brand" href="#">HelpPets</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse  navegacao" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
@@ -56,6 +57,22 @@
       </div>
     </div>
   </nav>
+  </header>
+  <!-- Fim do cabeçalho com o menu -->
+
+
+
+<!-- Carrossel que fará parte do destaque -->
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
 
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -68,6 +85,7 @@
       <div class="carousel-item">
         <img src="compressjpeg/dog-gato-mascara-min.jpg" class="d-block w-100" alt="...">
       </div>
+
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -80,30 +98,53 @@
   </div>
 
 
+<!-- Fim do carrossel -->
+
+<!-- Conteúdo principal do site onde estão os destaques que serão os animais mais antigos -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col destaque"></div>
+    </div>
+  </div>
+
+
+
 
 <main class="menu-inicio">
-  <div class="card-group">
+  <div class="card-group ">
     <div class="card">
-      <img src="compressjpeg/cat-1-min.jpg" class="card-img-top" alt="...">
+      <img src="compressjpeg/cat-1-min.jpg" class="card-img-top rounded" alt="img da gata Tatiana">
       <div class="card-body">
 
+<!-- Destaque 1 -->
         <ul>
           <li><h5 class="card-title">Tatiana</h5></li>
           <li><p>Gato</p></li>
           <li><p class="card-text">Sexo: Fêmea</p></li>
           <li><p>Idade: 1 ano</p></li>
+
+          <li><p>Caracteres: Carinhosa, brincalhona e muito mimada.</p></li>
+
           <li><p>Caracteres: Carinhosa e brincalhona.</p></li>
           <li><p>Cidade: Belo Horizonte - MG</p></li>
           <li><p>*Se da bem com crianças e outros animais.</p></li>
           <li><p>Contato: 00 12345-6789</p></li>
         </ul>
+
+        
+
         <a href="#" class="card-link">Quero Adotar❤️</a>
         
       </div>
     </div>
+    <!-- Fim Destaque 1 -->
+
+    <!-- Destaque 2 -->
     <div class="card">
-      <img src="compressjpeg/dog-1-min.jpeg" class="card-img-top" alt="...">
+      <img src="compressjpeg/dog-1-min.jpeg" class="card-img-top rounded" alt="Img do cachorrinho Chico">
       <div class="card-body">
+
 
         <ul>
           <li><h5 class="card-title">Chico</h5></li>
@@ -119,9 +160,13 @@
         <a href="#" class="card-link">Quero Adotar❤️</a>
       </div>
     </div>
+    <!-- Fim Destaque 2 -->
+
+    <!-- Destaque 3 -->
     <div class="card">
-      <img src="compressjpeg/cat-2-min.jpg" class="card-img-top" alt="...">
+      <img src="compressjpeg/cat-2-min.jpg" class="card-img-top rounded" alt="Img do gatinho Garfield">
       <div class="card-body">
+
 
         <ul>
           <li><h5 class="card-title">Garfield</h5></li>
@@ -134,20 +179,46 @@
           <li><p>Contato: 00 12345-6789</p></li>
         </ul>
         
+
+        
         <a href="#" class="card-link">Quero Adotar❤️</a>
       </div>
     </div>
-  </div>
+    <!-- Fim Destaque 3 -->
+  
 </main>
+<!-- Final do conteúdo principal  -->
 
 <!-- Footer -->
+
 <footer>
+
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+  
+    
+
+   
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+
+  </section>
+  <!-- Section: Links  -->
+
+
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">HelpPets.com</a>
   </div>
 </footer>
+
 
 
 
