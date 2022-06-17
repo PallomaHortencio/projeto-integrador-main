@@ -12,6 +12,7 @@ height: 450px;
 
 
 
+
 main a:hover{
     color: #fff;
     font-size: 17px;
@@ -71,4 +72,16 @@ ul li {
 
 h5 {
     text-align: center;
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+.formulario {
+   
+
 }
