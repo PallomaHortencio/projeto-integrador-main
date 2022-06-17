@@ -96,3 +96,32 @@ footer {
     background-color: #59ABA7;
     color: #fff;
 }
+
+
+
+/* Fundo login */
+.container-login100 {
+    width: 100%;
+    min-height: 100vh;
+   
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+   
+    background: -webkit-linear-gradient(left,#98fff8,#f7a2a2);
+  
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
+}
