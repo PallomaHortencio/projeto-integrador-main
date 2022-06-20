@@ -117,22 +117,22 @@
               </div>
 
               <div>
-                <label for="obs" ></label>
+                <label for="mensagem" ></label>
                 <span id="maximo"> (restam <b id="caracteres">200</b> caracteres)</span>
-                <textarea name="obs" id="obs" cols="20" rows="5" maxlength="200" class="form-control form-control-lg" placeholder="Informações" required></textarea>
+                <textarea name="mensagem" id="mensagem" cols="20" rows="5" maxlength="200" class="form-control form-control-lg" placeholder="Informações" required></textarea>
               </div>
 
               <p class="my-4"></p>
          
               <div class="mb-3">
-                <label for="formFile" class="form-label">Mande uma foto do pet!</label>
+                <label for="formFile" class="form-label" style="border-bottom: #FBB03B 3px solid;"><b>Envie uma foto do pet!</b></label>
                 <input class="form-control" type="file" id="formFile">
               </div>
 
               
               <p class="my-4"></p>
 
-              <button class="btn btn-primary btn-lg btn-block" type="submit">Fazer Cadastro🐾</button>
+              <button class="btn btn-black btn-lg btn-block" style="background-color: #FBB03B" type="submit">Fazer Cadastro🐾</button>
   
             </div>
           </div>
@@ -182,6 +182,138 @@
 <script src="projeto-integrador.js"></script>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<script src="plugins/vanilla-masker.min.js"></script>
+
+    <script>
+        VMasker(document.querySelector("#cep")).maskPattern("99999-999");
+
+        function inputHandler(masks, max, event) {
+        var c = event.target;
+        var v = c.value.replace(/\D/g, '');
+        var m = c.value.length > max ? 1 : 0;
+        VMasker(c).unMask();
+        VMasker(c).maskPattern(masks[m]);
+        c.value = VMasker.toPattern(v, masks[m]);
+        }
+
+        var telMask = ['(99) 9999-99999', '(99) 99999-9999'];
+        var tel = document.querySelector('#telefone');
+        VMasker(tel).maskPattern(telMask[0]);
+        tel.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
+
+        var docMask = ['999.999.999-999', '99.999.999/9999-99'];
+        var doc = document.querySelector('#documento');
+        VMasker(doc).maskPattern(docMask[0]);
+        doc.addEventListener('input', inputHandler.bind(undefined, docMask, 14), false);
+    </script>
+
+
+
+<script src="plugins/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#endereco").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");
+                $("#estado").val("");
+            }
+            
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function() {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if(validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#endereco").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#estado").val("...");
+                        $("#status").text("CEP encontrado").css('color', 'black');
+
+                        
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#endereco").val(dados.logradouro);
+                                $("#bairro").val(dados.bairro);
+                                $("#cidade").val(dados.localidade);
+                                $("#estado").val(dados.uf);
+                                $("#status").text(" ").css('color', 'black');
+                            } //end if.
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                $("#status").text("CEP não encontrado.").css('color', 'red');
+                            }
+                        });
+                    } //end if.
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        $("#status").text("Formato de CEP inválido.").css('color', 'red');
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
+        });
+        </script>
+
+
+
+        <!-- Criando um contador de caracteres -->
+        <script>
+            const spanMaximo = $("#maximo");
+            const bCaracteres = $("#caracteres");
+            const textMensagem = $("#mensagem");
+
+            // determinando a quantidade de caracteres
+            let quantidade = 100;
+
+            // Ouvinte de evento
+            textMensagem.on ("input", function() {
+
+                let conteudo = textMensagem.val();
+
+                // criando a contagem regressiva
+                 let contagem = quantidade - conteudo.length;
+                 // console.log(contagem);
+
+                 // Exibindo o número no HTML
+                 bCaracteres.text(contagem);
+
+
+                 if (contagem == 0) {
+                 spanMaximo.css('color', 'red');
+                 spanMaximo.text("Limite de caracteres alcançado");
+                 } else {
+                 spanMaximo.css('color', 'black');
+                 spanMaximo.html("(restam <b id='caracteres'>" +contagem+ "</b> caracteres)");
+                 }
+            });
+
+        </script>
+        
 
 </body>
 </html>

@@ -125,3 +125,7 @@ footer {
 *, ::after, ::before {
     box-sizing: inherit;
 }
+
+footer a {
+    color: #000;
+}
