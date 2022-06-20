@@ -46,6 +46,11 @@ main img {
 }
 
 
+.card-body ul li {
+    
+    list-style: none;
+}
+
 
 
 .card-text{
